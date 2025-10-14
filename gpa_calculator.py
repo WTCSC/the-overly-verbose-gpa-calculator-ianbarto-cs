@@ -1,0 +1,50 @@
+from time import sleep
+
+gpa_values = input("Enter your GPA's with , separating them with , ")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+gpa_values = gpa_values.split(',')
+gpa_values = [float(num.strip()) for num in gpa_values]
+gpa_sum = float(sum(gpa_values))
+gpa_count = int(len(gpa_values))
+gpa = gpa_sum / gpa_count
+gpa_sorted = sorted(gpa_values)
+print(gpa_sorted)
+print(f"Your average GPA given your values is: {gpa}")
+
+
+goal_gpa = input("What is your goal GPA? ").strip()
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.3)
+print("Calculating...")
+sleep(0.5)
+print("Analyzing...")
+sleep(1)
+print("Determining if you can reach your goal GPA...")
+sleep(1)
+lowest_value = min(gpa_sorted)
+gpa_sorted.remove(lowest_value)
+gpa_sorted.append(4.0)
+gpa_sum = float(sum(gpa_sorted))
+gpa_count = int(len(gpa_sorted))
+new_gpa = gpa_sum / gpa_count
+if new_gpa >= float(goal_gpa):
+    print(f"Congratulations! By replacing your lowest GPA with a 4.0, you have reached your goal GPA of {goal_gpa}. Your new GPA is {new_gpa}.")
+else:
+    print(f"Unfortunately, even by replacing your lowest GPA with a 4.0, you have not reached your goal GPA of {goal_gpa}. Your new GPA is {new_gpa}.")
