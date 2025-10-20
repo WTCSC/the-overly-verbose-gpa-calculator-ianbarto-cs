@@ -1,10 +1,6 @@
 from time import sleep
-
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
 
 def gpa_calculator():
     gpa_values = input(f"Enter your GPA's being sure to: \n Separating them with commas \n No Duplicate Commas \n No letters \n Input Here:  ")
@@ -26,7 +22,6 @@ def gpa_calculator():
     gpa_rounded = round(gpa,2)
     gpa_sorted = sorted(gpa_values)
     print(f"Your average GPA given your values is: {gpa_rounded}")
-    
     # Calculate the goal GPA
     goal_gpa = input("What is your goal GPA? ").strip()
     lowest_value = min(gpa_sorted)
@@ -40,6 +35,5 @@ def gpa_calculator():
         print(f"Congratulations! By replacing your lowest GPA with a 4.0, you have reached your goal GPA of {goal_gpa}. Your new GPA is {new_gpa_rounded}.")
     else:
         print(f"Unfortunately, even by replacing your lowest GPA with a 4.0, you have not reached your goal GPA of {goal_gpa}. Your new GPA is {new_gpa}.")
-
 
 gpa_calculator()
